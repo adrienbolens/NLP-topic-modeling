@@ -87,7 +87,8 @@ def get_info_str(page, level):
                                              page.title, page.ns)
 
 
-def get_page_text(page, keywords=None, verbose=True):
+def get_page_text(page, keywords=None, verbose=True,
+                  use_summary_if_empty=True):
     """
     Returns a list of strings containing the texts of all the sections and
     their subsections (recursively).
@@ -95,22 +96,22 @@ def get_page_text(page, keywords=None, verbose=True):
     keep sections with a title containing at least one of the `keywords`.
     """
     page_text = []
-    if keywords is None:
-        keywords = ['plot', 'character', 'summary', 'topic', 'theme',
-                    'summari', 'background', 'origin', 'introduction',
-                    'concept', 'symbol']
+    #  if keywords is None:
+    #      keywords = ['plot', 'character', 'summary', 'topic', 'theme',
+    #                  'summari', 'background', 'origin', 'introduction',
+    #                  'concept', 'symbol']
     if verbose:
         print(f"In page '{page.title}':")
     for s in page.sections:
-        if filter_by_keywords(s.title, keywords):
+        if keywords is None or filter_by_keywords(s.title, keywords):
             if verbose:
                 print(' '*4, f"Using text of section '{s.title}'")
             page_text += get_section_text(s)
         elif verbose:
             print(' '*4, f"Ignoring section '{s.title}'")
 
-    #  if len(page_text) == 0:
-    #      page_text.append(page.summary)
+    if use_summary_if_empty and len(page_text) == 0:
+        page_text.append(page.summary)
 
     if verbose:
         print()
@@ -150,7 +151,8 @@ def prepare_text_for_lda(text, lemmatize=True, pos_tagging=True, min_len=3):
         raise TypeError('`text` must be a string or an iterable of string.')
 
     if pos_tagging:
-        tokens = [t for t in tokens if t.pos_ in ['NOUN', 'VERB']]
+        tokens = [t for t in tokens
+                  if t.pos_ in ['NOUN', 'VERB', 'ADJ', 'ADV']]
     if lemmatize:
         tokens = [t.lemma_.lower() for t in tokens]
     else:
