@@ -1,4 +1,4 @@
-# NLP - Topic modelling
+# NLP - Topic modeling
 
 
 In this project, I experiement with topic modelling, in the context of natural language processing, using the popular Latent Dirichlet Allocation (LDA) method.
@@ -28,9 +28,9 @@ For instance: `topic 1: 'space', 'ship', 'planet', ...` `topic 2: 'human', 'soci
 
 ## Files
 
-- [text_mining_and_processing.ipynb](text_mining_and_processing.ipynb): Jupyter notebook dealing with text mining from Wikipedia and processing it into a corpus that can be used for LDA.
+- [text_mining_and_processing.ipynb](https://nbviewer.jupyter.org/github/adrienbolens/NLP-topic-modeling/blob/master/text_mining_and_processing.ipynb): Jupyter notebook dealing with text mining from Wikipedia and processing it into a corpus that can be used for LDA.
 - [extract_wikipedia_data.py](extract_wikipedia_data.py): Python script containing custom functions used by the notebook for text mining and processing.
-- [Author-Topic_LDA.ipynb](Author-Topic_LDA.ipynb): Jupyter notebook dealing with training the LDA model and getting results.
+- [Author-Topic-LDA.ipynb](https://nbviewer.jupyter.org/github/adrienbolens/NLP-topic-modeling/blob/master/Author-Topic-LDA.ipynb): Jupyter notebook dealing with training the LDA model and getting results.
 
 
 ## Packages
