@@ -1,7 +1,7 @@
 # NLP - Topic modelling
 
 
-In this project, I try hand at topic modelling, in the context of natural language processing, using the popular Latent Dirichlet Allocation (LDA) method.
+In this project, I experiement topic modelling, in the context of natural language processing, using the popular Latent Dirichlet Allocation (LDA) method.
 
 The question I try to answer is "What are the main themes in the novels of my favorite science-fiction writer?".
 
@@ -27,9 +27,9 @@ For instance: `topic 1: 'space', 'ship', 'planet', ...` `topic 2: 'human', 'soci
 
 ## Files
 
--[text_mining_and_processing.ipynb](text_mining_and_processing.ipynb): Jupyter notebook dealing with text mining from Wikipedia and processing it into a corpus that can be used for LDA.
--[extract_wikipedia_data.py](extract_wikipedia_data.py): Python script containing custom functions used by the notebook for text mining and processing.
--[Author-Topic_LDA.ipynb](Author-Topic_LDA.ipynb): Jupyter notebook dealing with training the LDA model and getting results.
+- [text_mining_and_processing.ipynb](text_mining_and_processing.ipynb): Jupyter notebook dealing with text mining from Wikipedia and processing it into a corpus that can be used for LDA.
+- [extract_wikipedia_data.py](extract_wikipedia_data.py): Python script containing custom functions used by the notebook for text mining and processing.
+- [Author-Topic_LDA.ipynb](Author-Topic_LDA.ipynb): Jupyter notebook dealing with training the LDA model and getting results.
 
 
 ## Packages
@@ -39,6 +39,6 @@ I use the Wikipedia API for text mining, as well as [this Python wrapper](https:
 ## References
 
 Details about LDA and the methods used in the gensim library are found the following papers:
--LDA: [Blei, Ng, & Jordan, 2003](http://www.jmlr.org/papers/v3/blei03a.html)
--online variational Bayes for LDA use by gensim: [Hoffman, Bach, & Blei, 2010](http://papers.nips.cc/paper/3902-online-learning-for-latentdirichlet-allocation!) 
--Author-Topic model:[Rosen-Zvi, Griffiths, Steyvers, & Smyth, 2012](https://arxiv.org/abs/1207.4169)
+- LDA: [Blei, Ng, & Jordan, 2003](http://www.jmlr.org/papers/v3/blei03a.html)
+- online variational Bayes for LDA use by gensim: [Hoffman, Bach, & Blei, 2010](http://papers.nips.cc/paper/3902-online-learning-for-latentdirichlet-allocation!) 
+- Author-Topic model:[Rosen-Zvi, Griffiths, Steyvers, & Smyth, 2012](https://arxiv.org/abs/1207.4169)
