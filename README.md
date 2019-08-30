@@ -6,7 +6,7 @@ In this project, I experiement with topic modelling, in the context of natural l
 The question I try to answer is "What main topics can be found in the novels of my favorite science-fiction writers?".
 Even though each novel is unique, there are typically some thematic environement or context in which the stories take place, which I try to extract from textual data (e.g. time travel, space exploration, robots, etc.)
 
-The work is diveded in three steps:
+The work is divided in three steps:
 1. Extracting the textual data: I use the information about SF novels found on Wikipedia, using its convenient API.
 2. Processing the texts: this includes
     - selecting the relevant information
