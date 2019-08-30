@@ -1,7 +1,6 @@
 import re
 import wikipediaapi
 import requests
-wiki_wiki = wikipediaapi.Wikipedia('en')
 
 
 def get_categorymembers(category,
